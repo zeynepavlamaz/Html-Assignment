@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kullanıcı Bilgi Formu</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input[type="radio"],
+  input[type="submit"] {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<form action="/form-handler" method="post">
+  <h2>Kullanıcı Bilgi Formu</h2>
+  <label for="ad">Ad:</label>
+  <input type="text" id="ad" name="ad">
+  
+  <label for="soyad">Soyad:</label>
+  <input type="text" id="soyad" name="soyad">
+  
+  <label for="email">E-posta:</label>
+  <input type="email" id="email" name="email">
+  
+  <label for="parola">Parola:</label>
+  <input type="password" id="parola" name="parola">
+  
+  <label for="erkek">Erkek</label>
+  <input type="radio" id="erkek" name="cinsiyet" value="Erkek">
+  
+  <label for="kadin">Kadın</label>
+  <input type="radio" id="kadin" name="cinsiyet" value="Kadın">
+  
+  <label for="meyve">Favori Meyve:</label>
+  <select id="meyve" name="meyve">
+    <option value="Elma">Elma</option>
+    <option value="Muz">Muz</option>
+    <option value="Çilek">Çilek</option>
+  </select>
+  
+  <label for="mesaj">Mesajınız:</label>
+  <textarea id="mesaj" name="mesaj" rows="4" cols="30"></textarea>
+  
+  <input type="submit" value="Gönder">
+</form>
+
+</body>
+</html>
